@@ -1,13 +1,13 @@
-package api
+package httpapi
 
 import "time"
 
-type Response struct {
+type FraudScoreResponse struct {
 	Approved   bool    `json:"approved"`
-	Fraudscore float64 `json:"fraud_score"`
+	FraudScore float64 `json:"fraud_score"`
 }
 
-type Request struct {
+type FraudScoreRequest struct {
 	ID              string           `json:"id"`
 	Transaction     Transaction      `json:"transaction"`
 	Customer        Customer         `json:"customer"`
