@@ -4,7 +4,7 @@ import "time"
 
 type FraudScoreResponse struct {
 	Approved   bool    `json:"approved"`
-	FraudScore float64 `json:"fraud_score"`
+	FraudScore float32 `json:"fraud_score"`
 }
 
 type FraudScoreRequest struct {
@@ -18,13 +18,13 @@ type FraudScoreRequest struct {
 
 type Transaction struct {
 	Amount       float32   `json:"amount"`
-	Installments int8      `json:"installments"`
+	Installments int       `json:"installments"`
 	RequestedAt  time.Time `json:"requested_at"`
 }
 
 type Customer struct {
 	AvgAmount      float32  `json:"avg_amount"`
-	TxCount24h     int8     `json:"tx_count_24h"`
+	TxCount24h     int      `json:"tx_count_24h"`
 	KnownMerchants []string `json:"known_merchants"`
 }
 
